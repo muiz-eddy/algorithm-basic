@@ -11,7 +11,7 @@ export function binarySearch (num: number, arr: number[]): boolean {
   let low = 0
   let hi = arr.length - 1
   while (low <= hi) {
-    const midpoint = Math.floor((hi - low) / 2)
+    const midpoint = low + Math.floor((hi - low) / 2)
     if (num === arr[midpoint]) {
       return true
     } else if (num < arr[midpoint]) {
