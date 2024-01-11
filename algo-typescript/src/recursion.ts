@@ -10,3 +10,25 @@ export function sum(n: number): number {
     return n + sum(n - 1)
   }
 }
+
+export function findmin(arr: number[], size: number): number {
+  if (size <= 0) {
+    return 0
+  } else if (size === 1) {
+    return arr[0]
+  } else {
+    return Math.min(arr[size - 1], findmin(arr, size - 1))
+  }
+}
+
+export function findsum(arr: number[], size: number): number {
+  let sum = arr[size - 1]
+  if (size <= 0) {
+    return 0
+  } else if (size === 1) {
+    return arr[0]
+  } else {
+    sum = sum + findsum(arr, size - 1)
+    return sum
+  }
+}
