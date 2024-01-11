@@ -2,6 +2,11 @@
 //
 
 export function sum(n: number): number {
-  // base case
-  // recursive case
+  if (n <= 0) {
+    return 0
+  } else if (n === 1) {
+    return 1
+  } else {
+    return n + sum(n - 1)
+  }
 }
