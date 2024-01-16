@@ -1,4 +1,4 @@
-import { sum, findmin, findsum } from '../src/recursion'
+import { sum, findmin, findsum, ispalindrome } from '../src/recursion'
 
 describe('sum function using recursion', () => {
   it('should sum all of the integer from 1 - n', () => {
@@ -23,5 +23,11 @@ describe('find minimum function using recursion', () => {
 describe('find sum function of an array using recursion', () => {
   it('should return the sum of the elements in an array', () => {
     expect(findsum(arr, arr.length)).toEqual(32)
+  })
+})
+
+describe('check the function is a palindrome or not using recursion', () => {
+  it('should return true or false', () => {
+    expect(ispalindrome(['M', 'O', 'M'], 3)).toEqual(true)
   })
 })

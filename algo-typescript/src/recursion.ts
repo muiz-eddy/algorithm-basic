@@ -32,3 +32,8 @@ export function findsum(arr: number[], size: number): number {
     return sum
   }
 }
+
+export function ispalindrome(arr: string[], size: number): boolean {
+  // base case
+  // recursive case
+}
